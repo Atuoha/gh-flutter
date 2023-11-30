@@ -22,8 +22,8 @@ jobs:
             channel: 'stable'
         - run: flutter pub get
         - run: flutter --version
-        -  run: flutter analyze
-        -  run: flutter test
-        -  run: flutter build apk
+        - run: flutter analyze
+        - run: flutter test
+        - run: flutter build apk
 
 
