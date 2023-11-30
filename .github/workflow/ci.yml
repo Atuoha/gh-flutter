@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  flutter test and run:
+    - name: Run flutter test and run app
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-java@v2
+          with:
+            java-version: '12.x'
+        - uses: subosito/flutter-action@v2
+          with:
+            channel: 'stable'
+        - name : "Flutter Pub Get"
+          run: flutter pub get
+
+        - name: "Flutter Version"
+          run: flutter --version
+
+        - name: "Flutter Analyze"
+          run: flutter analyze
+
+        - name: "Flutter Test"
+          run: flutter test
+
+        - name: "Flutter Build Apk"
+          run: flutter build apk
+
+
