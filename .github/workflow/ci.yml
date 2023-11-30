@@ -20,19 +20,10 @@ jobs:
         - uses: subosito/flutter-action@v2
           with:
             channel: 'stable'
-        - name : "Flutter Pub Get"
-          run: flutter pub get
-
-        - name: "Flutter Version"
-          run: flutter --version
-
-        - name: "Flutter Analyze"
-          run: flutter analyze
-
-        - name: "Flutter Test"
-          run: flutter test
-
-        - name: "Flutter Build Apk"
-          run: flutter build apk
+        - run: flutter pub get
+        - run: flutter --version
+        -  run: flutter analyze
+        -  run: flutter test
+        -  run: flutter build apk
 
 
