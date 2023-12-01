@@ -10,7 +10,7 @@ on:
 
 jobs:
   flutter_test_and_run:
-    - name: Run flutter test and run app
+      name: Run flutter test and run app
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
