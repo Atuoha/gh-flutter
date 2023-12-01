@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  flutter test and run:
+  flutter_test_and_run:
     - name: Run flutter test and run app
       runs-on: ubuntu-latest
       steps:
@@ -24,6 +24,6 @@ jobs:
         - run: flutter --version
         - run: flutter analyze
         - run: flutter test
-#        - run: flutter build apk
+        - run: flutter build apk
 
 
