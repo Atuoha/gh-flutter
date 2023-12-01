@@ -19,6 +19,8 @@
 
 // The price chart decipting the price of SparkCoin on each
 // day of January 2023
+import 'package:flutter/foundation.dart';
+
 final Map<DateTime, int> chart = {
   DateTime(2023, 1, 1): 120,
   DateTime(2023, 1, 2): 130,
@@ -66,7 +68,11 @@ int findBuyPrice(DateTime boughtAt, Map<DateTime, int> chart) {
 
 void main() {
   // should print 401
-  print(findBuyPrice(DateTime(2023,1, 20), chart));
+  if (kDebugMode) {
+    print(findBuyPrice(DateTime(2023,1, 20), chart));
+  }
   // should print 140
-  print(findBuyPrice(DateTime(2023,1, 5), chart));
+  if (kDebugMode) {
+    print(findBuyPrice(DateTime(2023,1, 5), chart));
+  }
 }
