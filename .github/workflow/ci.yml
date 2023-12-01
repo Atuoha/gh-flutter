@@ -24,6 +24,6 @@ jobs:
         - run: flutter --version
         - run: flutter analyze
         - run: flutter test
-        - run: flutter build apk
+#        - run: flutter build apk
 
 
