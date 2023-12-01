@@ -21,7 +21,7 @@ class _MyHomePageState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Counter Screen'),
+        title: const Text('App Counter Screen'),
       ),
       body: Center(
         child: Column(
